@@ -8,15 +8,12 @@ Simple shell script to get METAR readings on your command line!
 - defaults to KRNT (my home airport) if no arguments are specified
 - desgined to work with [TextBar](http://www.richsomerfield.com/apps/) to put METAR into your osx menubar
 
-### How to read a metar
+### How to read a METAR
 
-[Wunderground METAR tutorial](http://www.wunderground.com/metarFAQ.asp?MR=1)
-
-[METAR wiki page](https://en.wikipedia.org/wiki/METAR)
-
-[METAR decoder tool](http://heras-gilsanz.com/manuel/METAR-Decoder.html)
-
-[METAR mysteries](http://www.cfidarren.com/r-metarmystery.htm) (explains some of the acronyms and history)
+- [Wunderground METAR tutorial](http://www.wunderground.com/metarFAQ.asp?MR=1)
+- [METAR wiki page](https://en.wikipedia.org/wiki/METAR)
+- [METAR decoder tool](http://heras-gilsanz.com/manuel/METAR-Decoder.html)
+- [METAR mysteries](http://www.cfidarren.com/r-metarmystery.htm) (explains some of the acronyms and history)
 
 *Example:*
 ```
