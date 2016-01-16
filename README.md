@@ -11,8 +11,11 @@ Simple shell script to get METAR readings on your command line!
 ### How to read a metar
 
 [Wunderground METAR tutorial](http://www.wunderground.com/metarFAQ.asp?MR=1)
+
 [METAR wiki page](https://en.wikipedia.org/wiki/METAR)
+
 [METAR decoder tool](http://heras-gilsanz.com/manuel/METAR-Decoder.html)
+
 [METAR mysteries](http://www.cfidarren.com/r-metarmystery.htm) (explains some of the acronyms and history)
 
 *Example:*
