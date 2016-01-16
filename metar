@@ -3,8 +3,15 @@
 # use KRNT as default airport unless something else is specified on cli args
 if [ -z "$1" ]; then
   AIRPORT="KRNT"
+elif [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+  cat << EOF
+Usage: metar [airport code]
+Example: metar KSEA
+More at https://github.com/vsinha/METAR
+EOF
+  exit 1
 else
-  AIRPORT="$1"
+  AIRPORT=$(awk '{print toupper($0)}' <<< $1)
 fi
 
 CURLURL="http://weather.noaa.gov/pub/data/observations/metar/stations/"

@@ -1,6 +1,6 @@
 ## METAR.sh
 
-`$ ./metar.sh [airportcode]`
+`$ ./metar [airportcode]`
 
 Simple shell script to get METAR readings on your command line!
 
@@ -17,7 +17,7 @@ Simple shell script to get METAR readings on your command line!
 
 *Example:*
 ```
-$ ./metar.sh KRNT
+$ ./metar KRNT
 KRNT 161553Z 12007KT 10SM -RA OVC036 07/06 A2965 RMK AO2 SLP046 P0003 T00720061
 ```
 
