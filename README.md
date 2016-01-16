@@ -1,6 +1,7 @@
 ## METAR.sh
 
 `$ ./metar [airportcode]`
+`$ ./metar --help`
 
 Simple shell script to get METAR readings on your command line!
 
