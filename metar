@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # use KRNT as default airport unless something else is specified on cli args
 if [ -z "$1" ]; then
