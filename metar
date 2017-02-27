@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # use KRNT as default airport unless something else is specified on cli args
 if [ -z "$1" ]; then
@@ -14,9 +14,7 @@ else
   AIRPORT=$(awk '{print toupper($0)}' <<< $1)
 fi
 
-CURLURL="http://weather.noaa.gov/pub/data/observations/metar/stations/"
-CURLURL+=$AIRPORT
-CURLURL+=".TXT"
+CURLURL="https://aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&stationString=$AIRPORT&hoursBeforeNow=1"
 
-curl --silent $CURLURL | grep $AIRPORT
+curl --silent $CURLURL | grep -oPm1 "(?<=<raw_text>)[^<]+"
 
