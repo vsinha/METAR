@@ -2,12 +2,12 @@
 
 # use KRNT as default airport unless something else is specified on cli args
 if [ -z "$1" ]; then
-  AIRPORT="KRNT"
+  AIRPORT="EDDK"
 elif [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   cat << EOF
 Usage: metar [airport code]
-Example: metar KSEA
-More at https://github.com/vsinha/METAR
+Example: metar EDDK
+More at https://github.com/flymia/METAR
 EOF
   exit 1
 else
@@ -16,5 +16,5 @@ fi
 
 CURLURL="https://aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&stationString=$AIRPORT&hoursBeforeNow=1"
 
-curl --silent $CURLURL | grep -oPm1 "(?<=<raw_text>)[^<]+"
+curl --silent $CURLURL | grep -m1 "<raw_text>" | sed -n 's:.*<raw_text>\(.*\)</raw_text>.*:\1:p'
 
