@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# use KRNT as default airport unless something else is specified on cli args
+# use EDDK as default airport unless something else is specified on cli args
 if [ -z "$1" ]; then
   AIRPORT="EDDK"
 elif [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
@@ -18,3 +18,4 @@ CURLURL="https://aviationweather.gov/adds/dataserver_current/httpparam?dataSourc
 
 curl --silent $CURLURL | grep -m1 "<raw_text>" | sed -n 's:.*<raw_text>\(.*\)</raw_text>.*:\1:p'
 
+exit 0
